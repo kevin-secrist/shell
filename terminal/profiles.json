@@ -5,27 +5,20 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "copyOnSelect": false,
+
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
 
     "profiles":
     [
         {
-            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-            "name": "Windows PowerShell",
-            "commandline": "powershell.exe",
+            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
             "hidden": false,
-            "startingDirectory": "C:\\Code",
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl",
             "fontFace": "Delugia Nerd Font",
-            "colorScheme": "Solarized Dark - Patched"
-        },
-        {
-            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-            "name": "cmd",
-            "commandline": "cmd.exe",
-            "hidden": false,
-            "startingDirectory": "C:\\Code",
-            "fontFace": "Delugia Nerd Font",
-            "colorScheme": "Solarized Dark - Patched"
+            "colorScheme": "Ubuntu",
+            "useAcrylic": true
         },
         {
             "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -34,23 +27,34 @@
             "source": "Windows.Terminal.PowershellCore",
             "startingDirectory": "C:\\Code",
             "fontFace": "Delugia Nerd Font",
-            "colorScheme": "Solarized Dark - Patched"
+            "colorScheme": "Solarized Dark Higher Contrast",
+            "useAcrylic": true
         },
         {
-            "guid": "{6e9fa4d2-a4aa-562d-b1fa-0789dc1f83d7}",
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "name": "Windows PowerShell",
+            "commandline": "powershell.exe",
             "hidden": false,
-            "name": "WSL Legacy",
-            "source": "Windows.Terminal.Wsl",
+            "startingDirectory": "C:\\Code",
             "fontFace": "Delugia Nerd Font",
-            "colorScheme": "Ubuntu"
+            "colorScheme": "Solarized Dark Higher Contrast"
+        },
+        {
+            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+            "name": "cmd",
+            "commandline": "cmd.exe",
+            "hidden": false,
+            "startingDirectory": "C:\\Code",
+            "fontFace": "Delugia Nerd Font",
+            "colorScheme": "Solarized Dark Higher Contrast"
         },
         {
             "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-            "hidden": false,
+            "hidden": true,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure",
             "fontFace": "Delugia Nerd Font",
-            "colorScheme": "Solarized Dark - Patched"
+            "colorScheme": "Solarized Dark Higher Contrast"
         }
     ],
 
@@ -142,10 +146,37 @@
             "brightWhite": "#fcf4dc",
             "background": "#001e27",
             "foreground": "#708284"
+        },
+        {
+            "name": "Solarized Dark Higher Contrast",
+            "black": "#002831",
+            "red": "#d11c24",
+            "green": "#6cbe6c",
+            "yellow": "#a57706",
+            "blue": "#2176c7",
+            "purple": "#c61c6f",
+            "cyan": "#259286",
+            "white": "#eae3cb",
+            "brightBlack": "#006488",
+            "brightRed": "#f5163b",
+            "brightGreen": "#51ef84",
+            "brightYellow": "#b27e28",
+            "brightBlue": "#178ec8",
+            "brightPurple": "#e24d8e",
+            "brightCyan": "#00b39e",
+            "brightWhite": "#fcf4dc",
+            "background": "#001e27",
+            "foreground": "#9cc2c3"
         }
     ],
 
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
-    "keybindings": []
+    "keybindings": [
+        { "command": "copy", "keys": ["ctrl+c"] },
+        { "command": "paste", "keys": ["ctrl+v"] },
+        { "command": "closePane", "keys": ["ctrl+w"] },
+        { "command": "newTab", "keys": ["ctrl+t"] },
+        { "command": "commandPalette", "keys":"ctrl+shift+p" }
+    ]
 }
