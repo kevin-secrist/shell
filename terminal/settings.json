@@ -16,7 +16,7 @@
             "hidden": false,
             "name": "Ubuntu",
             "source": "Windows.Terminal.Wsl",
-            "fontFace": "Delugia Nerd Font",
+            "fontFace": "Cascadia Code PL",
             "colorScheme": "Ubuntu",
             "useAcrylic": true
         },
@@ -26,7 +26,7 @@
             "name": "PowerShell Core",
             "source": "Windows.Terminal.PowershellCore",
             "startingDirectory": "C:\\Code",
-            "fontFace": "Delugia Nerd Font",
+            "fontFace": "Cascadia Code PL",
             "colorScheme": "Solarized Dark Higher Contrast",
             "useAcrylic": true
         },
@@ -36,7 +36,7 @@
             "commandline": "powershell.exe",
             "hidden": false,
             "startingDirectory": "C:\\Code",
-            "fontFace": "Delugia Nerd Font",
+            "fontFace": "Cascadia Code PL",
             "colorScheme": "Solarized Dark Higher Contrast"
         },
         {
@@ -45,7 +45,7 @@
             "commandline": "cmd.exe",
             "hidden": false,
             "startingDirectory": "C:\\Code",
-            "fontFace": "Delugia Nerd Font",
+            "fontFace": "Cascadia Code PL",
             "colorScheme": "Solarized Dark Higher Contrast"
         },
         {
@@ -53,7 +53,7 @@
             "hidden": true,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure",
-            "fontFace": "Delugia Nerd Font",
+            "fontFace": "Cascadia Code PL",
             "colorScheme": "Solarized Dark Higher Contrast"
         }
     ],
