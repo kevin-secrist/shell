@@ -120,7 +120,7 @@ export PATH=$PATH:$HOME/.local/bin
 # go get -u github.com/justjanne/powerline-go
 GOPATH=$HOME/go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $?)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -modules time,venv,user,host,ssh,cwd,perms,git,aws,hg,jobs,exit,root -static-prompt-indicator -newline)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
@@ -153,5 +153,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # bind ctrl+backspace
 bind '"\C-H":backward-kill-word'
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 cd ~/Code
