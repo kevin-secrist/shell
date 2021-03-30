@@ -75,6 +75,11 @@ export GPG_TTY=$(tty)
 # be sure to allow VcXsrv access to public networks on firewall
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 
+if [ `command -v wslpath` ]; then
+  DESKTOP=`powershell.exe '[Environment]::GetFolderPath("Desktop")' | tr -d '\r'`
+  export DESKTOP=`wslpath "$DESKTOP"`
+fi
+
 # apt install direnv
 eval "$(direnv hook bash)"
 
