@@ -1,0 +1,13 @@
+# https://github.com/direnv/direnv/wiki/Node
+# to use, add the following to .envrc of project
+#   use nvm <version>
+
+use_nvm() {
+  local node_version=$1
+
+  nvm_sh=~/.nvm/nvm.sh
+  if [[ -e $nvm_sh ]]; then
+    source $nvm_sh
+    nvm use $node_version
+  fi
+}

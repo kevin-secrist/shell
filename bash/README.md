@@ -10,6 +10,7 @@ This contains my ongoing bash profile that I use across multiple machines.
    ```bash
    ln -sb -t ~ $PWD/.bashrc
    ln -sb -t ~ $PWD/.bash_aliases
+   ln -sb -t ~ $PWD/.direnvrc
    ```
 
 1. Restart the shell or run `source ~/.bashrc` to pick up the new profile
