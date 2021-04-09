@@ -84,6 +84,12 @@ fi
 eval "$(direnv hook bash)"
 
 # any machine-specific bash scripts here
+# things that may be in bash_local:
+#   # sudo apt install keychain
+#   /usr/bin/keychain --nogui $HOME/.ssh/ssh_key_here
+#   source $HOME/.keychain/$HOSTNAME-sh
+#
+#   # npm completion >> ~/.bash_local
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
