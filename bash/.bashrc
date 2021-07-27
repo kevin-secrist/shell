@@ -105,6 +105,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # bind ctrl+backspace
 bind '"\C-H":backward-kill-word'
+# bind esc to clear line
+bind '"\e":kill-whole-line'
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
