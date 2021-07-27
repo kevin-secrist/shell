@@ -67,10 +67,10 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 fi
 
 # start the ssh-agent, any ssh-keys should be added in .bash_local
-eval $(ssh-agent -s) > /dev/null
+#eval $(ssh-agent -s) > /dev/null
 
 # start gpg-agent
-gpg-agent --daemon --enable-ssh-support
+#gpg-agent --daemon --enable-ssh-support
 export GPG_TTY=$(tty)
 
 # set up x11 forwarding (only required on WSL)
