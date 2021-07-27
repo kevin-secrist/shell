@@ -50,8 +50,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# reference the bin directory for scripts
+_REPO_LOCATION=$(dirname $(realpath $BASH_SOURCE))
+_REPO_BIN="$_REPO_LOCATION/bin"
+
 # PATH updates
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN
 
 # go get -u github.com/justjanne/powerline-go
 GOPATH=$HOME/go
