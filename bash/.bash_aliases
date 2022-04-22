@@ -22,3 +22,8 @@ alias urlencode='python3 -c "from urllib.parse import quote, sys; print(quote(  
 alias urldecode='python3 -c "from urllib.parse import unquote, sys; print(unquote(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read()[0:-1]))"'
 alias datestring='date +%Y%m%d%H%M%S'
 alias nodetls='export NODE_TLS_REJECT_UNAUTHORIZED=0'
+
+if grep -q -i microsoft /proc/version; then
+  alias copy="clip.exe"
+  alias paste="powershell.exe Get-Clipboard"
+fi
