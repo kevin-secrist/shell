@@ -53,14 +53,15 @@ fi
 # reference the bin directory for scripts
 _REPO_LOCATION=$(dirname $(realpath $BASH_SOURCE))
 _REPO_BIN="$_REPO_LOCATION/bin"
+_GITSCRIPTS_LOCATION=$(realpath "$_REPO_LOCATION/../git-scripts")
 
 # PATH updates
-export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN
+export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN:$_GITSCRIPTS_LOCATION
 
 # go get -u github.com/justjanne/powerline-go
 GOPATH=$HOME/go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -modules time,venv,user,host,ssh,cwd,perms,git,aws,hg,jobs,exit,root -static-prompt-indicator -newline)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -modules time,venv,user,ssh,cwd,perms,git,aws,hg,jobs,exit,root -static-prompt-indicator -newline)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
