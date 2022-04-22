@@ -56,7 +56,7 @@ _REPO_BIN="$_REPO_LOCATION/bin"
 _GITSCRIPTS_LOCATION=$(realpath "$_REPO_LOCATION/../git-scripts")
 
 # PATH updates
-export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN:$_GITSCRIPTS_LOCATION
+export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN:$_GITSCRIPTS_LOCATION:$HOME/go/bin
 
 # go get -u github.com/justjanne/powerline-go
 GOPATH=$HOME/go
