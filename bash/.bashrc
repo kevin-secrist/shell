@@ -54,11 +54,12 @@ fi
 _REPO_LOCATION=$(dirname $(realpath $BASH_SOURCE))
 _REPO_BIN="$_REPO_LOCATION/bin"
 _GITSCRIPTS_LOCATION=$(realpath "$_REPO_LOCATION/../git-scripts")
+_GO_BIN="$HOME/go/bin"
 
 # PATH updates
-export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN:$_GITSCRIPTS_LOCATION:$HOME/go/bin
+export PATH=$PATH:$HOME/.local/bin:$_REPO_BIN:$_GITSCRIPTS_LOCATION:$_GO_BIN
 
-# go get -u github.com/justjanne/powerline-go
+# go install github.com/justjanne/powerline-go
 GOPATH=$HOME/go
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $? -modules time,venv,user,ssh,cwd,perms,git,aws,hg,jobs,exit,root -static-prompt-indicator -newline)"
