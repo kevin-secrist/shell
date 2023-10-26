@@ -113,7 +113,6 @@ bind '"\e":kill-whole-line'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-cd ~/Code
 # opt-out of docker scan nag when running docker build
 export DOCKER_SCAN_SUGGEST=false
 
