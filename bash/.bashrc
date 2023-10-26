@@ -75,12 +75,6 @@ fi
 #gpg-agent --daemon --enable-ssh-support
 export GPG_TTY=$(tty)
 
-# set up x11 forwarding (only required on WSL)
-# requires an x11 server installed on windows
-# e.g. running VcXsrv: "C:\Program Files\VcXsrv\vcxsrv.exe" :0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl
-# be sure to allow VcXsrv access to public networks on firewall
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-
 if [ `command -v wslpath` ]; then
   DESKTOP=`powershell.exe '[Environment]::GetFolderPath("Desktop")' | tr -d '\r'`
   export DESKTOP=`wslpath "$DESKTOP"`
