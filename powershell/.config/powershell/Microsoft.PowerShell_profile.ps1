@@ -9,4 +9,6 @@ if (get-command oh-my-posh -ErrorAction Ignore)
   oh-my-posh init pwsh --config "$(oh-my-posh cache path)/themes/paradox.omp.json" | Invoke-Expression
 }
 
+# requires a nerd font
+# https://www.nerdfonts.com/font-downloads
 Import-Module -Name Terminal-Icons -ErrorAction Ignore

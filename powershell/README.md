@@ -17,6 +17,8 @@ curl -s https://ohmyposh.dev/install.sh | bash -s -- -d "$HOME/.local/bin"
 
 ### Cross-platform
 
+Install a nerd font, e.g. `CaskaydiaCove Nerd Font Mono``
+
 ```powershell
 Install-Module -Name Terminal-Icons -Repository PSGallery
 ```
