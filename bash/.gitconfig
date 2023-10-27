@@ -1,0 +1,23 @@
+[user]
+  name = Kevin Secrist
+[include]
+  path = ~/.gitconfig_local
+[commit]
+  gpgsign = true
+[gpg]
+  program = /usr/bin/gpg
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[diff]
+  guitool = vscode
+[difftool]
+  prompt = false
+[difftool "vscode"]
+  cmd = code --wait --diff $REMOTE $LOCAL
+[rebase]
+  updateRefs = true
+  autoSquash = true
+[init]
+  defaultBranch = main
