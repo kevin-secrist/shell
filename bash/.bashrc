@@ -53,7 +53,7 @@ fi
 _GO_BIN="$HOME/go/bin"
 
 # PATH updates
-export PATH=$PATH:$HOME/.local/bin:$_GO_BIN
+export PATH=$PATH:$_GO_BIN
 
 # go install github.com/justjanne/powerline-go
 GOPATH=$HOME/go
