@@ -1,0 +1,5 @@
+# terminal settings files
+*.backup
+*.backup.json
+state.json
+elevated-state.json
