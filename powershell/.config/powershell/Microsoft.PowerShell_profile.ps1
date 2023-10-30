@@ -1,6 +1,6 @@
 . (Join-Path $PSScriptRoot "functions.ps1")
 
-$env:PATH = "$(Join-Path $HOME .local bin)"
+$env:PATH += ":$(Join-Path $HOME .local bin)"
 
 Set-PSReadLineKeyHandler -Key Ctrl+h -Function BackwardKillWord
 
